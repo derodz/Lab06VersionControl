@@ -1,4 +1,5 @@
 # Daniel Rodriguez
+# 10/22/2024
 # Encode string of 8 numbers by shifting each digit up by 3
 def encode(pwd):
     encoded_pwd = ''
