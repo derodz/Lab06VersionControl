@@ -7,6 +7,11 @@ def encode(pwd):
         encoded_pwd += str(int(digit) + 3)
     return encoded_pwd
 
+def decoder(inputPassword):
+    decodedPassword = ""
+    for i in range(0, len(inputPassword), 1):
+        decodedPassword = decodedPassword + str(int(inputPassword[i]) - 3)
+
 if __name__ == '__main__':
     encoded_pwd = None
     while True:
