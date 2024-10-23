@@ -9,8 +9,9 @@ def encode(pwd):
 
 def decoder(inputPassword):
     decodedPassword = ""
-    for i in range(0, len(inputPassword), 1):
+    for i in range(0, len(inputPassword)):
         decodedPassword = decodedPassword + str(int(inputPassword[i]) - 3)
+    return decodedPassword
 
 if __name__ == '__main__':
     encoded_pwd = None
@@ -27,7 +28,7 @@ if __name__ == '__main__':
             encoded_pwd = encode(pwd)
             print('Your password has been encoded and stored!')
         elif option == 2:
-            decoded_pwd = '' #FIXME
+            decoded_pwd = decoder(encoded_pwd)
             print(f'The encoded password is {encoded_pwd}, and the original password is {decoded_pwd}.')
         elif option == 3:
             break        
